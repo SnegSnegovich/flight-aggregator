@@ -1,0 +1,15 @@
+server:
+  port: 8080 # Главный порт нашего API
+
+spring:
+  application:
+    name: search-service
+  threads:
+    virtual:
+      enabled: true # 🔥 МАГИЯ: Включаем виртуальные потоки для всего веб-сервера!
+
+eureka:
+  client:
+    service-url:
+      # Указываем, где искать наш Eureka Server
+      defaultZone: http://localhost:8761/eureka/
