@@ -38,4 +38,14 @@ subprojects {
         useJUnitPlatform()
     }
 
+    // Разрешаем компилятору Java использовать Preview-фичи (Structured Concurrency)
+    tasks.withType<JavaCompile> {
+        options.compilerArgs.add("--enable-preview")
+    }
+
+    // Разрешаем запускать приложение с Preview-фичами
+    tasks.withType<JavaExec> {
+        jvmArgs("--enable-preview")
+    }
+
 }
