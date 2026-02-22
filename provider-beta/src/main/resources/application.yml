@@ -1,0 +1,12 @@
+server:
+  port: 8082 # У каждого сервиса должен быть свой уникальный порт
+
+spring:
+  application:
+    name: provider-beta # Под этим именем сервис появится в Eureka
+
+eureka:
+  client:
+    service-url:
+      # Указываем, где искать наш Eureka Server
+      defaultZone: http://localhost:8761/eureka/
